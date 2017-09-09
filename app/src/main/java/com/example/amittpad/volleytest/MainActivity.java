@@ -30,10 +30,10 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity  {
 
         // json object response url
-        private String urlJsonObj = "http://api.androidhive.info/volley/person_object.json";
+        private String urlJsonObj = "https://api.myjson.com/bins/8zdmx";
 
         // json array response url
-        private String urlJsonArry = "http://api.androidhive.info/volley/person_array.json";
+        private String urlJsonArry = "https://api.myjson.com/bins/gq0i1";
 
         private static String TAG = MainActivity.class.getSimpleName();
         private Button btnMakeObjectRequest, btnMakeArrayRequest;
@@ -85,12 +85,11 @@ public class MainActivity extends AppCompatActivity  {
 
         showpDialog();
 
-        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,
-                urlJsonObj, null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,urlJsonObj, null, new Response.Listener<JSONObject>() {
 
             @Override
             public void onResponse(JSONObject response) {
-                Log.d(TAG, response.toString());
+               // Log.d(TAG, response.toString());
 
                 try {
                     // Parsing json object response
